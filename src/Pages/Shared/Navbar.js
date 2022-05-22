@@ -1,21 +1,22 @@
 import React from 'react';
 import letterIcon from '../../images/icons/b (1).png'
 import iconBrand from '../../images/icons/188333.png'
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const navOptions = <>
-        <li className='mx-3'><a>Home</a></li>
-        <li className='mx-3'><a>Purchase</a></li>
-        <li className='mx-3'><a>Blogs</a></li>
-        <li className='mx-3'><a>Contact Us</a></li>
-        <li className='mx-3'><a>Login</a></li>
-        <li className='mx-3'><a>My Portfolio</a></li>
+        <li className='mx-3'><Link to='/'>Home</Link></li>
+        <li className='mx-3'><Link to='/purchase'>Purchase</Link></li>
+        <li className='mx-3'><Link to='/blogs'>Blogs</Link></li>
+        <li className='mx-3'><Link to='/contactus'>Contact Us</Link></li>
+        <li className='mx-3'><Link to='/login'>Login</Link></li>
+        <li className='mx-3'><Link to='/myportfolio'>My Portfolio</Link></li>
     </>
     return (
         <div>
             <div className='pt-2'>
-                <a class="  font-semibold text-4xl ">
+                <Link to='/' class="  font-semibold text-4xl ">
                     Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<img className='w-6 pb-3 inline' src={iconBrand} alt="" />
-                </a>
+                </Link>
             </div>
             <div class="navbar bg-transperent">
 

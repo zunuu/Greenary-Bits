@@ -1,6 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blogs from './Pages/Blogs/Blogs';
+import ContactUs from './Pages/ContactUs/ContactUs';
 import Homepage from './Pages/Homepage/Homepage';
+import Login from './Pages/Login/Login';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import Purchase from './Pages/Purchase/Purchase';
+import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -10,7 +16,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage></Homepage>} />
         <Route path='home' element={<Homepage></Homepage>} />
+        <Route path='purchase' element={<Purchase></Purchase>} />
+        <Route path='login' element={<Login></Login>} />
+        <Route path='contactus' element={<ContactUs></ContactUs>} />
+        <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>} />
+        <Route path='blogs' element={<Blogs></Blogs>} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
