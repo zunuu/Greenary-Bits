@@ -15,8 +15,8 @@ const Banner = () => {
 
                         <div className="max-w-xl p-10 rounded-3xl bg-green-200 bg-opacity-40">
                             <h1 class="text-4xl font-bold  text-neutral">let's grow your garden!</h1>
-                            <p class="py-6 text-neutral">Grab the opportunity to grow your agriculture business with our decent tools and gadgets</p>
-                            <button class="btn btn-neutral text-white">Let's Start</button>
+                            <p class="py-6 font-semibold text-neutral">Grab the opportunity to grow your agriculture business with our decent tools and gadgets</p>
+                            <button class="btn btn-danger bg-opacity-40 border-0 text-white">Let's Start</button>
                         </div>
 
                     </div>

@@ -6,6 +6,7 @@ const Navbar = () => {
         <li className='mx-3'><a>Home</a></li>
         <li className='mx-3'><a>Purchase</a></li>
         <li className='mx-3'><a>Blogs</a></li>
+        <li className='mx-3'><a>Contact Us</a></li>
         <li className='mx-3'><a>Login</a></li>
         <li className='mx-3'><a>My Portfolio</a></li>
     </>
