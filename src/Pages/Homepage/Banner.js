@@ -6,7 +6,7 @@ import Navbar from '../Shared/Navbar';
 import './Banner.css'
 const Banner = () => {
     return (
-        <div className='bannercontent'>
+        <div className='bannercontent '>
             <Navbar></Navbar>
             <div class="w-100    max-h-screen carousel ">
 

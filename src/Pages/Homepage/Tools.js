@@ -1,0 +1,56 @@
+import React from 'react';
+import ToolsCard from './ToolsCard';
+
+const Tools = () => {
+    const tools = [
+        {
+            "_id": 1,
+            "name": "Mini Grafting Set",
+            "short_description": "This is a set of 3 Tools for digging, graft, and cutting stem, digging soil, coal, gravel, snow, sand, or ore.general category of set tailored to fill basic need to maintain a garden.A mini hand shovel which Builds as sharp or nearly sharp edges, often shaped as triangular points.",
+            "min_order_quantity": 5,
+            "available_quantity": 80,
+            "price": 120,
+            "image": "https://i.ibb.co/3WJJVHP/rsz-david-rangel-daeqlhd7zrk-unsplash.jpg"
+        },
+        {
+            "_id": 2,
+            "name": "Watering can",
+            "short_description": "The capacity of the container can be anywhere from 5 litres to 10 litres (depends on your preferable size) . It is usually made of metal. At the end of the spout, a \"rose\" (a device, like a cap, with small holes) can be placed to break up the stream of water into droplets, to avoid excessive water pressure on the soil or on delicate plants.",
+            "min_order_quantity": 10,
+            "available_quantity": 320,
+            "price": 60,
+            "image": "https://i.ibb.co/prNGNJB/rsz-2robert-linder-bwosyva0szc-unsplash.jpg"
+        },
+        {
+            "_id": 3,
+            "name": "Terrarium Pots",
+            "short_description": "Sealable/adjustable fancy glasses container . Terraria are often kept as decorative or ornamental items. Closed terraria create a unique environment for plant growth, as the transparent walls allow for both heat and light to enter the terrarium.",
+            "min_order_quantity": 10,
+            "available_quantity": 120,
+            "price": 100,
+            "image": "https://i.ibb.co/YTyCqfz/rsz-art-and-soil-bangalore-6ncpclozwu4-unsplash.jpg"
+        }
+    ]
+    return (
+        <div >
+            < div class="p-10 border-opacity-50" >
+
+                <div class="divider text-4xl">TOOLS</div>
+
+            </div >
+            <div>
+                {
+                    tools.map(eachtool => <ToolsCard
+                        key={tools._id}
+                        eachtool={eachtool}
+                    >
+
+                    </ToolsCard>)
+                }
+            </div>
+
+        </div >
+    );
+};
+
+export default Tools;
