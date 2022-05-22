@@ -1,17 +1,20 @@
 import React from 'react';
-
+import letterIcon from '../../images/icons/b (1).png'
+import iconBrand from '../../images/icons/188333.png'
 const Navbar = () => {
     const navOptions = <>
-        <li><a>Home</a></li>
-        <li><a>Purchase</a></li>
-        <li><a>Blogs</a></li>
-        <li><a>Login</a></li>
-        <li><a>My Portfolio</a></li>
+        <li className='mx-3'><a>Home</a></li>
+        <li className='mx-3'><a>Purchase</a></li>
+        <li className='mx-3'><a>Blogs</a></li>
+        <li className='mx-3'><a>Login</a></li>
+        <li className='mx-3'><a>My Portfolio</a></li>
     </>
     return (
         <div>
             <div className='pt-2'>
-                <a class="   text-4xl ">Greenary Bits</a>
+                <a class="  font-semibold text-4xl ">
+                    Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<img className='w-6 pb-3 inline' src={iconBrand} alt="" />
+                </a>
             </div>
             <div class="navbar bg-transperent">
 
@@ -20,7 +23,7 @@ const Navbar = () => {
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabindex="0" class="menu text-md menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabindex="0" class="menu text-md menu-compact dropdown-content mt-3 p-2 shadow bg-green-700 bg-opacity-70 text-white rounded-box w-52">
 
                             {/* <li tabindex="0">
                                 <a class="justify-between">
@@ -43,7 +46,7 @@ const Navbar = () => {
 
                 {/* desktop nav  */}
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu text-md font-bold text-neutral menu-horizontal p-0">
+                    <ul class="menu text-md font-semibold text-neutral menu-horizontal p-0">
 
                         {/* <li tabindex="0">
                             <a>
