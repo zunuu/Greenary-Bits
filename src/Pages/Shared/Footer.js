@@ -4,7 +4,7 @@ import GoalsCard from '../Homepage/GoalsCard';
 const Footer = () => {
     return (
         <div>
-            <GoalsCard></GoalsCard>
+            <GoalsCard ></GoalsCard>
             <footer class="footer grid-rows-2 p-10 bg-neutral text-neutral-content">
 
                 <div>

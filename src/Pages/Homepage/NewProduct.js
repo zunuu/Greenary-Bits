@@ -30,6 +30,7 @@ const NewProduct = () => {
             </div>
         </div>
 
+
     );
 };
 
