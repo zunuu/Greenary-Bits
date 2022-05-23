@@ -7,6 +7,11 @@ import countriesIcon from '../../images/icons/location.png'
 const BusinessSummary = () => {
     return (
         <div className='business_sum pt-4'>
+            < div class="p-10 border-opacity-50" >
+
+                <div class="divider text-4xl font-semibold">Business Summary</div>
+
+            </div >
             <div className='bg-white p-11 mx-8 rounded-2xl'>
                 <h2 className='text-neutral text-4xl uppercase font-semibold'>Hundreds of Retailer Accross the Globe</h2>
 
@@ -50,6 +55,7 @@ const BusinessSummary = () => {
 
                 </div>
             </div>
+
         </div>
 
     );

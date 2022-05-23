@@ -1,7 +1,7 @@
 .business_sum {
     background-image: url(../../images/stats.png);
-    min-height: 50vh;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* min-height: 50vh; */
+    background-position: bottom;
+    background-repeat: repeat-x;
     background-size: cover;
 }

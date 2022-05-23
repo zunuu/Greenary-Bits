@@ -1,9 +1,12 @@
 import React from 'react';
 import iconBrand from '../../images/icons/188333.png'
+import GoalsCard from '../Homepage/GoalsCard';
 const Footer = () => {
     return (
         <div>
+            <GoalsCard></GoalsCard>
             <footer class="footer grid-rows-2 p-10 bg-neutral text-neutral-content">
+
                 <div>
                     <span class="footer-title">Services</span>
                     <a class="link link-hover">Branding</a>

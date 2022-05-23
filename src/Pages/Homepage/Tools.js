@@ -35,7 +35,7 @@ const Tools = () => {
         <div >
             < div class="p-10 border-opacity-50" >
 
-                <div class="divider text-4xl">TOOLS</div>
+                <div class="divider text-4xl font-semibold">TOOLS</div>
 
             </div >
             <div>
