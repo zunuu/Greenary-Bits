@@ -1,6 +1,7 @@
 import React from 'react';
 import CountDown from './CountDown';
 import GoalsCard from './GoalsCard';
+import NewProduct from './NewProduct';
 const OurGoal = () => {
     return (
 
@@ -18,8 +19,9 @@ const OurGoal = () => {
                 <li data-content="🚩" class="step ">Shipping</li>
             </ul>
 
-            <h3 className='text-2xl text-neutral py-12'>Stay in countdown for our upcoming combo package gardening tools</h3>
+            <h3 className='pt-28 text-2xl font-semibold text-neutral py-12'>Stay in touch for our upcoming exciting Package gardening tools</h3>
             {/* <CountDown></CountDown> */}
+            <NewProduct></NewProduct>
 
         </div >
 
