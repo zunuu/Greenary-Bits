@@ -7,12 +7,12 @@ const NewProduct = () => {
     return (
 
         <div className=''>
-            <div class="hero rounded-2xl indicator sm:indicator-middle min-h-fit bg-yellow-400 bg-opacity-50 mb-5">
+            <div class="hero rounded-3xl indicator sm:indicator-middle min-h-fit bg-yellow-50  mb-5">
                 <span class="indicator-item indicator-center badge badge-primary">Upcoming</span>
                 <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src={new1} class="max-w-sm rounded-lg shadow-2xl" alt='' />
-                    <img src={new2} class="max-w-sm rounded-lg shadow-2xl" alt='' />
-                    <img src={new3} class="max-w-sm rounded-lg shadow-2xl" alt='' />
+                    <img src={new1} class="max-w-sm rounded-lg shadow-3xl" alt='' />
+                    <img src={new2} class="max-w-sm rounded-lg shadow-3xl" alt='' />
+                    <img src={new3} class="max-w-sm rounded-lg shadow-3xl" alt='' />
 
                 </div>
 

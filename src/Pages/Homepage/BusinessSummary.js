@@ -8,11 +8,9 @@ const BusinessSummary = () => {
     return (
         <div className='business_sum pt-4'>
             < div class="p-10 border-opacity-50" >
-
                 <div class="divider text-4xl font-semibold">Business Summary</div>
-
             </div >
-            <div className='bg-white p-11 mx-8 rounded-2xl'>
+            <div className='bg-white p-11 mx-8 rounded-full'>
                 <h2 className='text-neutral text-4xl uppercase font-semibold'>Hundreds of Retailer Accross the Globe</h2>
 
                 <div class=" stats p-8 stats-vertical lg:stats-horizontal ">
@@ -21,18 +19,18 @@ const BusinessSummary = () => {
                         <div class="stat-figure text-primary">
                             <img src={retailIcon} alt="" />
                         </div>
-                        <div class="stat-title">Happy Retailer</div>
-                        <div class="stat-value">100+</div>
-                        <div class="stat-desc">1992 - 2022</div>
+                        <div class="stat-title">Clients</div>
+                        <div class="stat-value">45+</div>
+                        <div class="stat-desc">1992-2022</div>
                     </div>
 
                     <div class="stat">
                         <div class="stat-figure text-primary">
                             <img src={revenueIcon} alt="" />
                         </div>
-                        <div class="stat-title">Annual revenue</div>
-                        <div class="stat-value">66M+</div>
-                        <div class="stat-desc">↗︎ 400 (22%)</div>
+                        <div class="stat-title">Revenue</div>
+                        <div class="stat-value">88M+</div>
+                        <div class="stat-desc">↗︎ <small>Annual(12%)</small></div>
                     </div>
 
                     <div class="stat">
@@ -50,7 +48,7 @@ const BusinessSummary = () => {
                         </div>
                         <div class="stat-title">Countries</div>
                         <div class="stat-value">18</div>
-                        <div class="stat-desc">↘︎ 90 (14%)</div>
+                        <div class="stat-desc">↗︎ 7 (14%)</div>
                     </div>
 
                 </div>
