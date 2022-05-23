@@ -2,6 +2,7 @@ import React from 'react';
 import letterIcon from '../../images/icons/b (1).png'
 import iconBrand from '../../images/icons/188333.png'
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 const Navbar = () => {
     const navOptions = <>
         <li className='mx-3'><Link to='/'>Home</Link></li>
@@ -15,7 +16,7 @@ const Navbar = () => {
         <div>
             <div className='pt-2'>
                 <Link to='/' class="  font-semibold text-4xl ">
-                    Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<img className='w-6 pb-3 inline' src={iconBrand} alt="" />
+                    Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<span className='flip'><img className='letter w-6 pb-3 inline' src={iconBrand} alt="" /></span>
                 </Link>
             </div>
             <div class="navbar bg-transperent">

@@ -1,4 +1,5 @@
 import React from 'react';
+import GoalsCard from './GoalsCard';
 import ToolsCard from './ToolsCard';
 
 const Tools = () => {
@@ -33,6 +34,9 @@ const Tools = () => {
     ]
     return (
         <div >
+
+
+
             < div class="p-10 border-opacity-50" >
 
                 <div class="divider text-4xl font-semibold">TOOLS</div>
