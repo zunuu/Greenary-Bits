@@ -10,7 +10,7 @@ const BusinessSummary = () => {
             < div class="p-10 border-opacity-50" >
                 <div class="divider text-4xl font-semibold">Business Summary</div>
             </div >
-            <div className='bg-white p-11 mx-8 rounded-full'>
+            <div className='bg-white p-16 mx-8 rounded-full'>
                 <h2 className='text-neutral text-4xl uppercase font-semibold'>Hundreds of Retailer Accross the Globe</h2>
 
                 <div class=" stats p-8 stats-vertical lg:stats-horizontal ">
@@ -29,8 +29,8 @@ const BusinessSummary = () => {
                             <img src={revenueIcon} alt="" />
                         </div>
                         <div class="stat-title">Revenue</div>
-                        <div class="stat-value">88M+</div>
-                        <div class="stat-desc">↗︎ <small>Annual(12%)</small></div>
+                        <div class="stat-value">9M+</div>
+                        <div class="stat-desc">↗︎<small>Per.M(8%)</small></div>
                     </div>
 
                     <div class="stat">

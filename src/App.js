@@ -7,11 +7,10 @@ import Login from './Pages/Login/Login';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
-import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App max-w-screen-2xl mx-auto">
       {/* <Navbar></Navbar> */}
       <Routes>
         <Route path='/' element={<Homepage></Homepage>} />

@@ -5,16 +5,17 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 const Navbar = () => {
     const navOptions = <>
-        <li className='mx-3'><Link to='/'>Home</Link></li>
-        <li className='mx-3'><Link to='/purchase'>Purchase</Link></li>
-        <li className='mx-3'><Link to='/blogs'>Blogs</Link></li>
-        <li className='mx-3'><Link to='/contactus'>Contact Us</Link></li>
-        <li className='mx-3'><Link to='/login'>Login</Link></li>
-        <li className='mx-3'><Link to='/myportfolio'>My Portfolio</Link></li>
+        <li className='mx-3  navOptions'><Link to='/'>Home</Link></li>
+        {/* purchase page won't show on navbar */}
+        {/* <li className='mx-3'><Link to='/purchase'>Purchase</Link></li> */}
+        <li className='mx-3 navOptions'><Link to='/blogs'>Blogs</Link></li>
+        <li className='mx-3 navOptions'><Link to='/contactus'>Contact Us</Link></li>
+        <li className='mx-3 navOptions'><Link to='/login'>Login</Link></li>
+        <li className='mx-3 navOptions'><Link to='/myportfolio'>My Portfolio</Link></li>
     </>
     return (
         <div>
-            <div className='pt-2'>
+            <div className='pt-4'>
                 <Link to='/' class="  font-semibold text-4xl ">
                     Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<span className='flip'><img className='letter w-6 pb-3 inline' src={iconBrand} alt="" /></span>
                 </Link>
@@ -48,8 +49,8 @@ const Navbar = () => {
 
 
                 {/* desktop nav  */}
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu text-md font-semibold text-neutral menu-horizontal p-0">
+                <div class="navbar-center hidden bg-transparent lg:flex">
+                    <ul class="menu   text-md font-semibold text-neutral menu-horizontal p-0 pt-1">
 
                         {/* <li tabindex="0">
                             <a>
