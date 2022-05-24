@@ -13,7 +13,7 @@ const BusinessSummary = () => {
             <div className='bg-white lg:p-16 mx-8 lg:rounded-full rounded-3xl'>
                 <h2 className='text-neutral text-2xl uppercase font-semibold px-8 lg:pt-0 pt-8'>Hundreds of Retailer Accross the Globe</h2>
 
-                <div class=" stats p-8 stats-vertical lg:stats-horizontal ">
+                <div class=" stats p-8 lg:mb-0 sm:mb-7 stats-vertical lg:stats-horizontal ">
 
                     <div class="stat ">
                         <div class="stat-figure text-primary">

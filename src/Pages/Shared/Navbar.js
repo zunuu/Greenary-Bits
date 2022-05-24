@@ -3,14 +3,24 @@ import letterIcon from '../../images/icons/b (1).png'
 import iconBrand from '../../images/icons/188333.png'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { Button } from 'react-daisyui';
+import { signOut } from 'firebase/auth';
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     const navOptions = <>
         <li className='mx-3  navOptions'><Link to='/'>Home</Link></li>
         {/* purchase page won't show on navbar */}
         {/* <li className='mx-3'><Link to='/purchase'>Purchase</Link></li> */}
         <li className='mx-3 navOptions'><Link to='/blogs'>Blogs</Link></li>
         <li className='mx-3 navOptions'><Link to='/contactus'>Contact Us</Link></li>
-        <li className='mx-3 navOptions'><Link to='/login'>Login</Link></li>
+        <li className='mx-3 navOptions'>
+            {user ? <Button className='btn btn-ghost' onClick={logout}>Log Out</Button> : <Link to='/login'>Login</Link>}
+        </li>
         <li className='mx-3 navOptions'><Link to='/myportfolio'>My Portfolio</Link></li>
     </>
     return (
