@@ -1,0 +1,6 @@
+.notfound {
+    background-image: url(../../images/ErrorPage404-05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

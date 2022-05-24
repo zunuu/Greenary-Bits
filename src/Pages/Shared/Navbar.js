@@ -12,19 +12,34 @@ const Navbar = () => {
     const logout = () => {
         signOut(auth);
     };
+
     const navOptions = <>
         <li className='mx-3  navOptions'><Link to='/'>Home</Link></li>
         {/* purchase page won't show on navbar */}
         {/* <li className='mx-3'><Link to='/purchase'>Purchase</Link></li> */}
         <li className='mx-3 navOptions'><Link to='/blogs'>Blogs</Link></li>
         <li className='mx-3 navOptions'><Link to='/contactus'>Contact Us</Link></li>
-        <li className='mx-3 navOptions'>
-            {user ? <Button className='btn btn-ghost' onClick={logout}>Log Out</Button> : <Link to='/login'>Login</Link>}
-        </li>
         <li className='mx-3 navOptions'><Link to='/myportfolio'>My Portfolio</Link></li>
+        <li className='mx-3 '>
+            {
+                user ?
+                    <>
+                        <Button className='btn  mx-3 forLogInUser' onClick={logout}>Log Out</Button>
+                        <Button className='btn  mx-3 forLogInUser' onClick={logout}>Dashboard</Button>
+                        <Button className='btn font-bold mx-3 forLogInUser' >{user.displayName}
+                        </Button>
+
+                    </>
+
+                    :
+                    <Link to='/login' className=' forLogInUser text-md'>Login</Link>
+            }
+        </li>
+
     </>
     return (
         <div>
+
             <div className='pt-4'>
                 <Link to='/' class="  font-semibold text-4xl ">
                     Greenary { }<img className='w-8 pb-2 inline' src={letterIcon} alt="" />its<span className='flip'><img className='letter w-6 pb-3 inline' src={iconBrand} alt="" /></span>
@@ -50,6 +65,7 @@ const Navbar = () => {
                                 </ul>
                             </li> */}
                             {navOptions}
+
                         </ul>
                     </div>
 

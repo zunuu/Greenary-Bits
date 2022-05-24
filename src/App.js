@@ -5,6 +5,7 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import Homepage from './Pages/Homepage/Homepage';
 import Login from './Pages/Login/Login';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer';
@@ -22,6 +23,7 @@ function App() {
         <Route path='contactus' element={<ContactUs></ContactUs>} />
         <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>} />
         <Route path='blogs' element={<Blogs></Blogs>} />
+        <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
     </div>
