@@ -10,8 +10,8 @@ const BusinessSummary = () => {
             < div class="p-10 border-opacity-50" >
                 <div class="divider text-4xl font-semibold">Business Summary</div>
             </div >
-            <div className='bg-white p-16 mx-8 rounded-full'>
-                <h2 className='text-neutral text-4xl uppercase font-semibold'>Hundreds of Retailer Accross the Globe</h2>
+            <div className='bg-white lg:p-16 mx-8 lg:rounded-full rounded-3xl'>
+                <h2 className='text-neutral text-2xl uppercase font-semibold px-8 lg:pt-0 pt-8'>Hundreds of Retailer Accross the Globe</h2>
 
                 <div class=" stats p-8 stats-vertical lg:stats-horizontal ">
 

@@ -11,7 +11,7 @@ const OurGoal = () => {
                 <div class="divider step text-4xl font-semibold">Our Goal</div>
 
             </div >
-            <ul class="steps px-8 bg-slate-50 py-8 lg:rounded-bl-sm lg:rounded-tr-sm  lg:rounded-tl-full lg:rounded-br-full  steps-vertical lg:steps-horizontal">
+            <ul class="steps px-8 bg-slate-50 py-8 rounded-3xl  steps-vertical lg:steps-horizontal">
                 <li data-content="🔎" class="step font-semibold text-lg  step-primary">Analyzing the market &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
                 <li data-content="💡" class="step font-semibold text-lg step-primary">Choose plan</li>
                 <li data-content="🛠️" class="step font-semibold text-lg step-primary">Starts for Production</li>
