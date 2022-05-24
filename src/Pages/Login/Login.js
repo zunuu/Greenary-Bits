@@ -1,18 +1,42 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
 import Navbar from '../Shared/Navbar';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
+import Loading from '../Shared/Loading';
 
 
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
-    const onSubmit = data => { console.log(data) };
+
+    let errorMessage;
+
+
+    if (loading || googleLoading) {
+        return <Loading></Loading>
+    }
+
+    if (error || googleError) {
+        errorMessage = <small className='text-orange-700 font-bold '>{error?.message || googleError?.message}</small>
+    }
+    if (googleUser) {
+        console.log(googleUser);
+    }
+    const onSubmit = data => {
+        console.log(data)
+        signInWithEmailAndPassword(data.email, data.password);
+    }
 
 
 
@@ -32,7 +56,7 @@ const Login = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
 
                                 <label class="label">
-                                    <span class="label-text">Email</span>
+                                    <span class="label-text font-semibold">Email</span>
                                 </label>
                                 <input
                                     type="email"
@@ -53,7 +77,7 @@ const Login = () => {
 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Password</span>
+                                    <span class="label-text font-semibold">Password</span>
                                 </label>
                                 <input
                                     type="password"
@@ -73,7 +97,8 @@ const Login = () => {
                                     }
 
                                 </label>
-                                <input className=' btn btn-outline btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-wide ' type="submit" value="LOGIN" />
+                                {errorMessage}
+                                <input className='my-2  btn btn-outline btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-wide ' type="submit" value="LOGIN" />
                             </form>
                         </div>
 
