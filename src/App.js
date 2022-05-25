@@ -4,6 +4,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import Homepage from './Pages/Homepage/Homepage';
 import Login from './Pages/Login/Login';
+import RequireAuth from './Pages/Login/RequireAuth';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
@@ -17,7 +18,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage></Homepage>} />
         <Route path='home' element={<Homepage></Homepage>} />
-        <Route path='purchase' element={<Purchase></Purchase>} />
+        <Route path='purchase' element=
+          {
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>
+          }
+        />
         <Route path='login' element={<Login></Login>} />
         <Route path='register' element={<Register></Register>} />
         <Route path='contactus' element={<ContactUs></ContactUs>} />

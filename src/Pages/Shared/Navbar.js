@@ -7,6 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Button } from 'react-daisyui';
 import { signOut } from 'firebase/auth';
+import userIcon from "../../images/user.png"
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
@@ -24,10 +25,9 @@ const Navbar = () => {
             {
                 user ?
                     <>
-                        <Button className='btn  mx-3 forLogInUser' onClick={logout}>Log Out</Button>
+                        <Button className='btn  mr-3 forLogInUser' onClick={logout}>Log Out</Button>
                         <Button className='btn  mx-3 forLogInUser' onClick={logout}>Dashboard</Button>
-                        <Button className='btn font-bold mx-3 forLogInUser' >{user.displayName}
-                        </Button>
+
 
                     </>
 
@@ -93,6 +93,17 @@ const Navbar = () => {
 
                 </div>
                 <div class="navbar-end ">
+                    {user ?
+                        <Link to='/' className='lg:text-lg text-xs font-semibold text-slate-500 flex flex-col justify-center items-center bg-green-50 bg-opacity-50 lg:p-5 sm:p-4 rounded-3xl lg:mt-[-70px] '>
+                            {user.photoURL ? <img style={{ width: '50px' }} className='w-100   flex justify-center items-center mask mask-hexagon-2 '
+                                src={user.photoURL} alt="" />
+                                :
+                                <img style={{ width: '30px' }} className='w-100 flex justify-center items-center rounded-full '
+                                    src={userIcon} alt="" />
+                            }
+                            {user.displayName}
+                        </Link>
+                        : <></>}
 
                 </div>
             </div>

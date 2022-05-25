@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ToolsCard.css'
 const ToolsCard = ({ eachtool }) => {
 
@@ -29,7 +30,7 @@ const ToolsCard = ({ eachtool }) => {
                         <div class="card-actions justify-center">
 
 
-                            <button class="btn btn-primary">Purchase</button>
+                            <Link to='/purchase' class="btn btn-primary">Purchase</Link>
                         </div>
                         {/* <div class="grid  w-52  flex-grow justify-center h-20 card bg-base-200 rounded-box place-items-center font-bold">Available:{eachtool.available_quantity}</div> */}
 
