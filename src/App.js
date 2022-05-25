@@ -7,7 +7,7 @@ import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import NotFound from './Pages/NotFound/NotFound';
-import Purchase from './Pages/Purchase/Purchase';
+import Purchase from './Pages/Homepage/Purchase/Purchase';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer';
 

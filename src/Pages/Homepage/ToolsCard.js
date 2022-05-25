@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ToolsCard.css'
-const ToolsCard = ({ eachtool }) => {
+const ToolsCard = ({ eachtool, setPurchaseModal }) => {
 
     return (
         <div className='px-8 pb-8 '>
@@ -30,7 +30,13 @@ const ToolsCard = ({ eachtool }) => {
                         <div class="card-actions justify-center">
 
 
-                            <Link to='/purchase' class="btn btn-primary">Purchase</Link>
+                            <label
+                                for="toolPurchaseModal"
+                                onClick={() => setPurchaseModal(eachtool)}
+                                class="btn btn-primary"
+                            >
+                                Purchase
+                            </label>
                         </div>
                         {/* <div class="grid  w-52  flex-grow justify-center h-20 card bg-base-200 rounded-box place-items-center font-bold">Available:{eachtool.available_quantity}</div> */}
 
@@ -39,7 +45,7 @@ const ToolsCard = ({ eachtool }) => {
 
             </div>
 
-        </div>
+        </div >
     );
 };
 
