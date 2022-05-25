@@ -14,7 +14,7 @@ const Tools = () => {
 
 
     useEffect(() => {
-        fetch('tools.json')
+        fetch('https://guarded-temple-78656.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setTools(data));
     }
@@ -34,18 +34,12 @@ const Tools = () => {
                     tools.map(eachtool => <ToolsCard
                         key={tools._id}
                         eachtool={eachtool}
-                        setPurchaseModal={setPurchaseModal}
                     >
 
                     </ToolsCard>)
                 }
             </div>
-            {purchaseModal &&
-                <Purchase
-                    purchaseModal={purchaseModal}
-                    setPurchaseModal={setPurchaseModal}
-                >
-                </Purchase>}
+
 
         </div >
     );

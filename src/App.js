@@ -17,19 +17,19 @@ function App() {
       {/* <Navbar></Navbar> */}
       <Routes>
         <Route path='/' element={<Homepage></Homepage>} />
-        <Route path='home' element={<Homepage></Homepage>} />
-        <Route path='purchase' element=
+        <Route path='/home' element={<Homepage></Homepage>} />
+        <Route path='/tools/:_id' element=
           {
             <RequireAuth>
               <Purchase></Purchase>
             </RequireAuth>
           }
         />
-        <Route path='login' element={<Login></Login>} />
-        <Route path='register' element={<Register></Register>} />
-        <Route path='contactus' element={<ContactUs></ContactUs>} />
-        <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>} />
-        <Route path='blogs' element={<Blogs></Blogs>} />
+        <Route path='/login' element={<Login></Login>} />
+        <Route path='/register' element={<Register></Register>} />
+        <Route path='/contactus' element={<ContactUs></ContactUs>} />
+        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>} />
+        <Route path='/blogs' element={<Blogs></Blogs>} />
         <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>

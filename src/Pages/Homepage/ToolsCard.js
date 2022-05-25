@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './ToolsCard.css'
-const ToolsCard = ({ eachtool, setPurchaseModal }) => {
+const ToolsCard = ({ eachtool }) => {
+    const navigate = useNavigate();
+
+    const navigateToPurchasePage = _id => {
+        navigate(`/tools/${_id}`)
+    }
 
     return (
         <div className='px-8 pb-8 '>
@@ -30,15 +35,15 @@ const ToolsCard = ({ eachtool, setPurchaseModal }) => {
                         <div class="card-actions justify-center">
 
 
-                            <label
-                                for="toolPurchaseModal"
-                                onClick={() => setPurchaseModal(eachtool)}
+                            <button
+                                onClick={() => navigateToPurchasePage(eachtool._id)}
+                                // to={`/tools/${eachtool._id}}`}
                                 class="btn btn-primary"
                             >
                                 Purchase
-                            </label>
+                            </button>
                         </div>
-                        {/* <div class="grid  w-52  flex-grow justify-center h-20 card bg-base-200 rounded-box place-items-center font-bold">Available:{eachtool.available_quantity}</div> */}
+
 
                     </div>
                 </div>
