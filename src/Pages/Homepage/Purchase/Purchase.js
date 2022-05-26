@@ -3,6 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Navbar from '../../Shared/Navbar';
+import { toast } from 'react-toastify';
+
+
 
 const Purchase = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -19,16 +22,16 @@ const Purchase = () => {
     // console.log(tools);
     const handlePurchase = event => {
         event.preventDefault();
-        const name = user.displayName
-        const email = event.target.email.value;
-        const address = event.target.address.value;
-        const quantity = event.target.quantity.value;
-        const tool = tools.name;
-        console.log(tool, name, email, quantity, address);
+        // const name = user.displayName
+        // const email = event.target.email.value;
+        // const address = event.target.address.value;
+        // const quantity = event.target.quantity.value;
+        // const tool = tools.name;
+        // console.log(tool, name, email, quantity, address);
 
 
 
-        const purchase = {
+        const order = {
             toolID: _id,
             toolName: tools.name,
             userName: user.displayName,
@@ -36,8 +39,24 @@ const Purchase = () => {
             quantity: event.target.quantity.value,
             address: event.target.address.value,
         }
-    }
 
+        // console.log(order);
+
+
+        fetch('https://guarded-temple-78656.herokuapp.com/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+
+            })
+    }
     return (
 
         <div className='bg-green-300 bg-opacity-30'>

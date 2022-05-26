@@ -1,7 +1,7 @@
 import React from 'react';
 import letterIcon from '../../images/icons/b (1).png'
 import iconBrand from '../../images/icons/188333.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -13,6 +13,18 @@ const Navbar = () => {
     const logout = () => {
         signOut(auth);
     };
+
+
+    // navigation to dashboard 
+    const navigate = useNavigate();
+    const navigateToDash = () => {
+        navigate('/dashboard')
+
+    }
+    // navigation to dashboard 
+
+
+
 
     const navOptions = <>
         <li className='mx-3  navOptions'><Link to='/'>Home</Link></li>
@@ -26,7 +38,7 @@ const Navbar = () => {
                 user ?
                     <>
                         <Button className='btn  mr-3 forLogInUser' onClick={logout}>Log Out</Button>
-                        <Button className='btn  mx-3 forLogInUser' onClick={logout}>Dashboard</Button>
+                        <Button className='btn  mx-3 forLogInUser' onClick={navigateToDash}>Dashboard</Button>
 
 
                     </>
@@ -94,11 +106,11 @@ const Navbar = () => {
                 </div>
                 <div class="navbar-end ">
                     {user ?
-                        <Link to='/' className='lg:text-lg text-xs font-semibold text-slate-500 flex flex-col justify-center items-center bg-green-50 bg-opacity-50 lg:p-5 sm:p-2 rounded-3xl lg:mt-[-70px] '>
+                        <Link to='/' className='lg:text-lg text-xs font-semibold text-slate-500 flex flex-col justify-center items-center bg-green-50 bg-opacity-50 lg:p-5 sm:p-3 rounded-xl lg:mt-[-70px] '>
                             {user.photoURL ? <img style={{ width: '50px' }} className='w-100   flex justify-center items-center mask mask-hexagon-2 '
                                 src={user.photoURL} alt="" />
                                 :
-                                <img style={{ width: '30px' }} className='w-100 flex justify-center items-center rounded-full '
+                                <img style={{ width: '50px' }} className='w-100 flex justify-center items-center rounded-full '
                                     src={userIcon} alt="" />
                             }
                             <small className='text-xs px-2'>{user.displayName}</small>
