@@ -16,10 +16,26 @@ const Purchase = () => {
     }
         , [])
 
-    console.log(tools);
+    // console.log(tools);
     const handlePurchase = event => {
         event.preventDefault();
+        const name = user.displayName
+        const email = event.target.email.value;
+        const address = event.target.address.value;
+        const quantity = event.target.quantity.value;
+        const tool = tools.name;
+        console.log(tool, name, email, quantity, address);
 
+
+
+        const purchase = {
+            toolID: _id,
+            toolName: tools.name,
+            userName: user.displayName,
+            userEmail: event.target.email.value,
+            quantity: event.target.quantity.value,
+            address: event.target.address.value,
+        }
     }
 
     return (
@@ -52,27 +68,28 @@ const Purchase = () => {
                     <div className='grow bg-orange-300 bg-opacity-50 rounded flex p-4 lg:w-[800px] justify-center items-center'>
                         <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-2'>
                             <input
-                                type="text"
-                                placeholder="Type here"
+                                type="name"
+                                placeholder="Name"
                                 class="input font-semibold input-bordered text-xs w-full max-w-xs"
                                 disabled
                                 value={user.displayName}
                             />
                             <input
+                                name='email'
                                 type="text"
-                                placeholder="Type here"
+                                placeholder="Email"
                                 class="input text-xs font-thin input-bordered w-full max-w-xs "
                                 disabled
                                 value={user.email}
                             />
                             <input
-                                name='Quantity'
+                                name='quantity'
                                 type="text"
                                 placeholder="Quantity"
                                 class="input input-bordered w-full max-w-xs"
                             />
                             <input
-                                name='Address'
+                                name='address'
                                 type="text"
                                 placeholder="Address"
                                 class="input input-bordered w-full max-w-xs"
