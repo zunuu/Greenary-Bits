@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
 import Navbar from '../Shared/Navbar';
 
@@ -20,6 +21,8 @@ const Register = () => {
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const [token] = useToken(user)
+
     const navigate = useNavigate();
 
     let errorMessage;
@@ -32,14 +35,14 @@ const Register = () => {
     if (error || updateError) {
         errorMessage = <small className='text-orange-700 font-bold '>{error?.message || updateError?.message}</small>
     }
-    if (user) {
-        console.log(user);
+    if (token) {
+        navigate('/')
     }
     const onSubmit = async data => {
         console.log(data)
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        navigate('/');
+        // navigate('/');
     }
 
     return (
