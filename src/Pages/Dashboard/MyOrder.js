@@ -9,9 +9,19 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://guarded-temple-78656.herokuapp.com/order?userEmail=${user.email}`)
-                .then(res => res.json())
-                .then(data => setOrder(data));
+            fetch(`https://guarded-temple-78656.herokuapp.com/order?userEmail=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => {
+                    console.log(res);
+                    return res.json()
+                })
+                .then(data => {
+                    setOrder(data)
+                });
         }
     }, [user])
     return (

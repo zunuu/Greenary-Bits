@@ -16,6 +16,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import AddAReview from './Pages/Dashboard/AddAReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Allusers from './Pages/Dashboard/Allusers';
 
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route index element={<MyOrder></MyOrder>} ></Route>
           <Route path='review' element={<AddAReview></AddAReview>} ></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>} ></Route>
+          <Route path='users' element={<Allusers></Allusers>} ></Route>
         </Route>
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />
