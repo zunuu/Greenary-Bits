@@ -32,7 +32,7 @@ const Tools = () => {
             <div>
                 {
                     tools.map(eachtool => <ToolsCard
-                        key={tools._id}
+                        key={eachtool._id}
                         eachtool={eachtool}
                     >
 

@@ -21,7 +21,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [token] = useToken(googleUser)
+    const [token] = useToken(user || googleUser)
 
 
 
@@ -41,9 +41,9 @@ const Login = () => {
     if (token) {
         navigate(from, { replace: true });
     }
-    if (token) {
-        navigate(from, { replace: true });
-    }
+    // if (token) {
+    //     navigate(from, { replace: true });
+    // }
     const onSubmit = data => {
         console.log(data)
         signInWithEmailAndPassword(data.email, data.password);

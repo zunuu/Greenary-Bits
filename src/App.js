@@ -17,6 +17,10 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import AddAReview from './Pages/Dashboard/AddAReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Allusers from './Pages/Dashboard/Allusers';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
+import ManageTools from './Pages/Dashboard/ManageTools';
+import AddTools from './Pages/Dashboard/AddTools';
 
 
 
@@ -41,10 +45,31 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrder></MyOrder>} ></Route>
+          <Route index element={<MyProfile></MyProfile>} ></Route>
           <Route path='review' element={<AddAReview></AddAReview>} ></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>} ></Route>
-          <Route path='users' element={<Allusers></Allusers>} ></Route>
+          <Route path='myorders' element={<MyOrder></MyOrder>} ></Route>
+          <Route path='review' element={<AddAReview></AddAReview>} ></Route>
+          <Route path='users' element={
+            <RequireAdmin>
+              <Allusers></Allusers>
+            </RequireAdmin>
+          } ></Route>
+          <Route path='manageOrders' element={
+            <RequireAdmin>
+              <ManageAllOrders></ManageAllOrders>
+            </RequireAdmin>
+          } ></Route>
+          <Route path='manageTools' element={
+            <RequireAdmin>
+              <ManageTools></ManageTools>
+            </RequireAdmin>
+          } ></Route>
+          <Route path='addTool' element={
+            <RequireAdmin>
+              <AddTools></AddTools>
+            </RequireAdmin>
+          } ></Route>
         </Route>
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />

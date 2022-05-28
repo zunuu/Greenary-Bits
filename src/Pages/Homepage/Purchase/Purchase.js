@@ -102,18 +102,45 @@ const Purchase = () => {
                                 value={user.email}
                             />
                             <input
+                                name='min_order_quantity
+                                '
+                                type="text"
+                                placeholder="Minimum order quantity"
+                                class="input text-xs font-thin input-bordered w-full max-w-xs "
+                                disabled
+                                value={`Minimum Order Quantity: ${tools.min_order_quantity}`
+                                }
+                            />
+                            <input
                                 name='quantity'
                                 type="text"
                                 placeholder="Quantity"
                                 class="input input-bordered w-full max-w-xs"
                             />
+
                             <input
                                 name='address'
                                 type="text"
                                 placeholder="Address"
                                 class="input input-bordered w-full max-w-xs"
                             />
-                            <input
+                            {/* {(user > tools.min_order_quantity)
+                                ?
+
+                                
+
+                                :
+
+                                <input disabled
+                                    type="submit"
+                                    value="Order"
+                                    class="btn btn-neutral  w-full max-w-xs" />
+
+                            } */}
+
+
+
+                            < input
                                 type="submit"
                                 value="Order"
                                 class="btn btn-neutral  w-full max-w-xs" />

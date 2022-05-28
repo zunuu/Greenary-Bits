@@ -11,7 +11,11 @@ const ToolsCard = ({ eachtool }) => {
     return (
         <div className='px-8 pb-8 '>
             <div class=" card rounded-3xl lg:card-side bg-base-100 shadow-xl">
-                <figure className='bg-green-300 bg-opacity-30 '><img className='lg:w-fit' src={eachtool.image} alt="Album" /></figure>
+                <figure className='bg-green-300 bg-opacity-30 '><img style={{
+                    resizeMode: "cover",
+                    height: 500,
+                    width: 400
+                }} className='lg:w-fit' src={eachtool.image} alt="Album" /></figure>
                 <div>
                     <div class="card-body ">
                         <h2 class=" text-center text-3xl font-bold">{eachtool.name}</h2>
@@ -31,7 +35,7 @@ const ToolsCard = ({ eachtool }) => {
                             <div class="divider lg:divider-horizontal"></div>
                             <div class="grid flex-grow h-16 card bg-base-200 rounded-box place-items-center font-bold">Available Quantity: { }{eachtool.available_quantity}</div>
                         </div>
-                        <p className='font-bold text-2xl p-4 bg-green-300 bg-opacity-20 rounded-full'>Price: { }{eachtool.price}/Unit</p>
+                        <p className='font-bold text-2xl p-4 bg-green-300 bg-opacity-20 rounded-full'>Price: { }{eachtool.price}$/Unit</p>
                         <div class="card-actions justify-center">
 
 
